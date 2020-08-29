@@ -1,5 +1,7 @@
+
 const rp = require('request-promise');
 
+// Datos a enviar en el request.
 request = {
     method: 'get',
     url: 'https://reclutamiento-14cf7.firebaseio.com/personas.json'    
