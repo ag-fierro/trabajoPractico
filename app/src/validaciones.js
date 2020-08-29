@@ -16,9 +16,7 @@ function validarDni (dni , tamaño){
     }
 
     return true;
-}
-
-
+} 
 module.exports = {
     validarTipo,
     validarDni,
