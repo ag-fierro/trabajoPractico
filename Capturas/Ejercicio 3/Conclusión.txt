@@ -1,0 +1,9 @@
+Al realizar el primer request solicitamos al servidor que nos envie información,
+entonces recibimos la informacion mediante el texto con formato JSON.
+
+Luego al realizar el request mediante POST solicitamos al servidor la creacion de un nuevo
+objeto en el servidor con los datos enviandos.
+
+Para finalizar se puede comprobar como el request POST realizado en el paso anterior creó el
+nuevo objeto y este esta siendo mostrado en el listado que nos devuelve el nuevo request GET
+realizado.
