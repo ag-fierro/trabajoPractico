@@ -13,14 +13,21 @@ console.log(__dirname);
 // Enviar archivos que estan en la carpeta static cuando el navegador haga un GET / 
 app.use(express.static( __dirname + "/static"));
 
+
+
 // Iniciando el servidor en el puerto seleccionado.
 app.listen(puerto , () =>{
     console.log(`Servidor iniciado en el puerto ${puerto}`);
 })
 
-app.post('/',(req, res) =>{
+
+
+
+app.post('/agregar',(req, res) =>{
 
     var temp = req.body;
+
+    console.log(req.body);
 
     if( Object.keys(temp).length > 3 ){
         // si la cantidad de atributos dentro del objeto temporal es mayor a los necesarios.
@@ -48,6 +55,7 @@ app.post('/',(req, res) =>{
         res.send("El dni debe ser un numero con menos de 10 caracteres");
         return;
     }
+
     // Todo okay envio codigo 200 y el objeto que se ingresó.
     res.status(200)
     res.send(temp); 
