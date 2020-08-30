@@ -10,6 +10,9 @@
     
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+
+    <script language="JavaScript" type="text/javascript" src="submit.js"></script>
+
 </head>
 <body>
 
@@ -18,21 +21,23 @@
 
         <h1>Agregar Personas</h1>
 
-        <form action="/crearPersonas" method="POST" name="registro"> 
+        <form> 
             
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" required>
             <br>
             <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellidp" required>
+            <input type="text" name="apellido" id="apellido" required>
             <br>
             <label for="dni">DNI</label>
             <input type="number" name="dni" id="dni" size="10">
             <br>
-            <button type="submit">Enviar</button>
+            <button id="submit" onclick="enviarReq()">Enviar</button>
                        
         </form>
 
+
+        
    </main>
 
 </body>

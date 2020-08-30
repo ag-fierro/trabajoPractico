@@ -1,6 +1,5 @@
 const express = require('express');
-const vd = require('./validaciones.js');
-
+const vd = require('/validacion.js');
 
 const app = express();
 
@@ -23,26 +22,11 @@ app.use(express.static( __dirname + "/static"));
 
 app.post('/crearPersonas', (req, res) =>{
 
-    console.log(req.body);  
+    console.log(req.body); 
+    var temp = req.body
 
-    var temp = req.body;    
- 
-        //Validaciones sobre la informacion ingresada
-        if( Object.keys(temp).length > 3 ){
-            // si la cantidad de atributos dentro del objeto temporal es mayor a los necesarios.
-            res.status(400);
-            res.send("Solo se admiten 3 campos (Nombre, Apellido y Dni) ");
-            return;
-        }
+    
 
-        if( !vd.validarDni(temp.dni, 10 )){
-            // si el dni no es un numero o si tiene mas de 10 dígitos.
-            res.status(400);
-            res.send("El dni debe ser un numero con menos de 10 caracteres");
-            return;
-        }
-
-    // Todo okay envio codigo 200 y el objeto que se ingresó.
     res.status(200);
     res.send(temp);     
 
