@@ -1,5 +1,6 @@
 const express = require('express');
-const vd = require('/validacion.js');
+const validacion = require('./validacion.js');
+const rp = require('request-promise');
 
 const app = express();
 
@@ -19,15 +20,39 @@ app.listen(puerto , () =>{
 app.use(express.static( __dirname + "/static"));
 
 
-
 app.post('/crearPersonas', (req, res) =>{
 
     console.log(req.body); 
-    var temp = req.body
+    var temp = req.body;
 
-    
+    try{
+        validacion.validarObj(temp);
+    }catch (e){
+        // Si la validacion no esta bien devuelvo sin mandar a la bd.
+        console.log(e.message);
+        res.status(400);
+        res.send(e.message);
+        return;
+    }  
 
-    res.status(200);
-    res.send(temp);     
+    //request a la bd.
+    var request = {
+        url: 'https://reclutamiento-14cf7.firebaseio.com/personas.json',
+        method: 'POST',
+        body: JSON.stringify(temp)
+    }
 
+    rp(request)
+    .then( (resBd) => {        
+        res.status(resBd.status);
+        res.send(temp); 
+        console.log("Se envio correctamente al servidor" + temp);
+        return;   
+        
+    })
+    .catch( (err) => {
+        console.log( `Se ha producido un error. ${err}`);
+        return;
+    });
+  
 })
