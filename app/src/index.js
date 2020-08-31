@@ -1,11 +1,11 @@
 const express = require('express');
 const validacion = require('./validacion.js');
-const rp = require('request-promise');
+const axios = require('axios');
 
 async function enviarBd( data , respuesta ){
 
     var request = {
-        url: 'https://reclutamiento-14cf7.firebaseio.com/personas.json',
+        url: 'https://reclutamiento-14cf7.firebaseio.com',
         method: 'get'/*,
         body: JSON.stringify(temp)*/
     }
@@ -15,7 +15,7 @@ async function enviarBd( data , respuesta ){
             msg: ""
     }
     
-    var res = await rp(request)
+    var res = await axios(request)
                         .then((res)=>{
                             console.log("Todo okay");
                             objTemp.codigo = 200;
@@ -23,7 +23,7 @@ async function enviarBd( data , respuesta ){
                             
                         })
                         .catch((err)=>{
-                            console.log("Ocurrio un error");
+                            console.log("Ocurrio un error" + err);
                             objTemp.codigo = 500;
                             objTemp.msg = 'Ocurrio un error inesperado';
                             

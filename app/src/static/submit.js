@@ -25,7 +25,10 @@ function enviarReq(){
     }
 
     fetch('/crearPersonas', opciones ).then( res => {
-
+       
+        alert("llego la respuesta");
+       
+        /*
         switch(res.status){
             case 200: alert("Se agrego a la persona a la base de datos");
                 break;
@@ -35,7 +38,7 @@ function enviarReq(){
                 break;
             default: alert("Error");
         }
-
+*/
     })
     
        
