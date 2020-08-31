@@ -26,7 +26,7 @@ function enviarReq(){
 
     fetch('/crearPersonas', opciones ).then( res => {
        
-        alert("llego la respuesta");
+        alert(`llego la respuesta con codigo: ${res.status}`) ;
        
         /*
         switch(res.status){
