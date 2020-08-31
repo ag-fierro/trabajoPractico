@@ -2,6 +2,7 @@ const express = require('express');
 const validacion = require('./validacion.js');
 const rp = require('request-promise');
 
+
 const app = express();
 
 app.use(express.json());
@@ -22,37 +23,44 @@ app.use(express.static( __dirname + "/static"));
 
 app.post('/crearPersonas', (req, res) =>{
 
-    console.log(req.body); 
     var temp = req.body;
 
     try{
         validacion.validarObj(temp);
     }catch (e){
-        // Si la validacion no esta bien devuelvo sin mandar a la bd.
+        // Si la validacion no salió bien salgo sin mandar a la bd.
         console.log(e.message);
         res.status(400);
         res.send(e.message);
         return;
     }  
-
+    
     //request a la bd.
     var request = {
         url: 'https://reclutamiento-14cf7.firebaseio.com/personas.json',
-        method: 'POST',
-        body: JSON.stringify(temp)
+        method: 'get'/*,
+        body: JSON.stringify(temp)*/
     }
+    
+    var code = 500, msg = "Error inesperado";
 
     rp(request)
-    .then( (resBd) => {        
-        res.status(resBd.status);
-        res.send(temp); 
-        console.log("Se envio correctamente al servidor" + temp);
-        return;   
-        
+    .then( (resBd) => {  
+
+        console.log("Se envio correctamente al servidor" + resBd);
+        res.code(200);
+        res.send(resBd);
+
+        // Este res.send() no funciona porque esta en el scope del callback, si lo moves afuera llega al cliente perfectamente.
+
     })
     .catch( (err) => {
+
         console.log( `Se ha producido un error. ${err}`);
-        return;
+        res.code(500);
+        res.send(resBd);
+
     });
   
+
 })

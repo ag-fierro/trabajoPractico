@@ -32,6 +32,8 @@ function enviarReq(){
             case 400: alert("Existe algun error con el formato del formulario");
                 break;
             case 500: alert("Error inesperado, no se ha podido completar");
+                break;
+            default: alert("Error");
         }
 
     })
