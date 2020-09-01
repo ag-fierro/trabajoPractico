@@ -1,6 +1,4 @@
-# Título del Proyecto
-
-_Trabajo Práctico Virtual Dreams_
+# _Trabajo Práctico Virtual Dreams_
 
 ## Comenzando
 
@@ -9,7 +7,10 @@ _Descarga el codigo a tu maquina haciendo un clone de este repositorio o bien de
 ```
 https://github.com/ag-fierro/trabajoPractico/archive/master.zip
 ```
+## Requisitos 
 
+_Node.Js (v12.18.3)_
+_npm (6.14.6)_
 
 ## Instalación
 
