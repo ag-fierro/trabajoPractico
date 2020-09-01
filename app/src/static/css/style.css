@@ -10,59 +10,57 @@ body {
 }
 
 main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: rgba(87, 151, 235, 0.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(87, 151, 235, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
 
-h1{
- margin: 0 0 30px;
+h1 {
+  margin: 0 0 30px;
   padding: 0;
   color: black;
   text-align: center;
 }
 
-.User-box{
-
-    border: 1px solid rgba(0,0,0,.6);
-    padding: 15px;
-    border-radius: 20px;
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 1px 3px 2px rgba(0,0,0,.6);
-
+.User-box {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 20px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
 }
 
-input{
-    background: transparent;
-    border: 1px solid rgba(0,0,0,.6);
-    border-radius: 20px;
-    padding-left: 10px;
+input {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding-left: 10px;
 }
 
-button{
-    width: 25%;
-    margin: auto;
-    border-radius: 15px;
-    padding: 2px 10px;
-    background: transparent;
-    border: 1px solid rgba(0,0,0,.6);
-    box-shadow: 1px 3px 2px rgba(0,0,0,.6);
+button {
+  width: 25%;
+  margin: auto;
+  border-radius: 15px;
+  padding: 2px 10px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.6);
 }
 
-.container{
-    text-align: center;
+.container {
+  text-align: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -71,6 +69,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
