@@ -1,44 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Agregar Personas</title>
 
-    <meta charset="utf-8">	
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">   
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
-    <script language="JavaScript" type="text/javascript" src="submit.js"></script>
-
-</head>
-<body>
-
-    
-   <main>
-
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="Form-box">
         <h1>Agregar Personas</h1>
 
-        <form> 
-            
+        <form>
+          <div class="User-box">
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Obligatorio" required>
-            <br>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Obligatorio"
+              required
+            />
+          </div>
+
+          <div class="User-box">
             <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido" placeholder="Obligatorio" required>
-            <br>
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              placeholder="Obligatorio"
+              required
+            />
+          </div>
+
+          <div class="User-box">
             <label for="dni">DNI</label>
-            <input type="number" name="dni" id="dni" placeholder="Maximo 10 Dígitos">
-            <br>
-            <button id="submit" onclick="enviarReq()">Enviar</button>
-                       
+            <input
+              type="number"
+              name="dni"
+              id="dni"
+              placeholder="Maximo 10 Dígitos"
+            />
+          </div>
+
+          <div class="container">
+            <button id="submit" onclick="enviarReq()">Enviar</button>  
+          </div>
+                   
+          
         </form>
+      </div>
+    </main>
 
-
-        
-   </main>
-
-</body>
+    <script
+      language="JavaScript"
+      type="text/javascript"
+      src="submit.js"
+    ></script>
+  </body>
 </html>
