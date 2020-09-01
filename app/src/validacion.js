@@ -4,7 +4,7 @@ function validarTipo (nombre , tipo){
     if (typeof nombre !== tipo){
         throw new Error(`El tipo de dato no es el esperado (${tipo})`);
     }
-    else return false;
+    else return true;
 
 } 
 
