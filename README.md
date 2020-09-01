@@ -10,11 +10,12 @@ https://github.com/ag-fierro/trabajoPractico/archive/master.zip
 ## Requisitos 
 
 _Node.Js (v12.18.3)_
+
 _npm (6.14.6)_
 
 ## Instalación
 
-_Una vez descargado el codigo localmente, dirigirse al directorio "/app" dentro de la carpeta descargada_
+_Una vez descargado el codigo localmente, dirigirse al directorio "/app/src" dentro de la carpeta descargada_
 
 _En la terminal de comandos ejecutar_
 
@@ -22,17 +23,16 @@ _En la terminal de comandos ejecutar_
 npm start
 ```
 
-_El servicio será iniciado localmente y podras acceder a el en el navegador mediante_
-
+_El servicio será iniciado localmente y podras acceder mediante el navegador de preferencia accediendo a_
 ```
 http://localhost:3000/crearPersonas.html
 ```
 
 ## Demás Ejercicios
 
-_Podes ver el resto de los enunciados del ejercicio en la carpeta_
+_Podés ver el resto de los enunciados del ejercicio en la carpeta_
 
-_Para ejecurar el script 'mostrarPersonas.js' y ver los registros de la base de datos hay que abrir la terminal de comandos y dirijirse al directorio donde descargaste el codigo, y correr el siguiente comando_
+_Para ejecurar el script 'mostrarPersonas.js' y de igual forma que con la app principal, en "app/src" ejecutar el comando_
 ```
 node mostrarPersonas.js
 ```
