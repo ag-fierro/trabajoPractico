@@ -30,7 +30,7 @@ http://localhost:3000/crearPersonas.html
 
 ## Demás Ejercicios
 
-_Podés ver el resto de los enunciados del ejercicio en la carpeta_
+_Podés ver el resto de los enunciados del ejercicio en la carpeta descargada_
 
 _Para ejecurar el script 'mostrarPersonas.js' y de igual forma que con la app principal, en "app/src" ejecutar el comando_
 ```
