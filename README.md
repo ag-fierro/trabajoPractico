@@ -2,14 +2,16 @@
 
 _Trabajo Práctico Virtual Dreams_
 
-## Comenzando 🚀
+## Comenzando
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Descarga el codigo a tu maquina haciendo un clone de este repositorio o bien desde el link_
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+```
+https://github.com/ag-fierro/trabajoPractico/archive/master.zip
+```
 
 
-### Instalación 🔧
+## Instalación
 
 _Una vez descargado el codigo localmente, dirigirse al directorio "/app" dentro de la carpeta descargada_
 
@@ -25,3 +27,11 @@ _El servicio será iniciado localmente y podras acceder a el en el navegador med
 http://localhost:3000/crearPersonas.html
 ```
 
+## Demás Ejercicios
+
+_Podes ver el resto de los enunciados del ejercicio en la carpeta_
+
+_Para ejecurar el script 'mostrarPersonas.js' y ver los registros de la base de datos hay que abrir la terminal de comandos y dirijirse al directorio donde descargaste el codigo, y correr el siguiente comando_
+```
+node mostrarPersonas.js
+```
