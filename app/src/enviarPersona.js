@@ -4,8 +4,8 @@ function enviarBd( data , res){
 
     var request = {
         url: 'https://reclutamiento-14cf7.firebaseio.com/personas.json',
-        method: 'post',/*,
-        body: JSON.stringify(data)*/
+        method: 'post',
+        body: JSON.stringify(data)
     }
     
     rp(request)           
@@ -13,14 +13,21 @@ function enviarBd( data , res){
             
             console.log(`Se agrego a una persona a la base de datos con ID: ${resbd}`);
             res.status(201);
-            res.send(resbd);                
+            console.log(resbd);
+            res.json({
+                status: 201,
+                mensaje: resbd
+            });                
         
         })
         .catch((err)=>{
 
-            console.log(`Ocurrio un error "${err}" `);
+            console.log(`Ocurrio un error "${err.message}" `);
             res.status(500);
-            res.send(err);
+            res.json({
+                status: 500,
+                mensaje: err.message
+            });
             return false;
         })
     

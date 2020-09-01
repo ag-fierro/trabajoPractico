@@ -1,4 +1,4 @@
-function enviarReq(){
+async function enviarReq(){
 
     event.preventDefault();
 
@@ -10,7 +10,7 @@ function enviarReq(){
     _dni = parseInt(_dni);
 
     // Se convierte a un objeto JS
-    var data = {
+    var temp = {
             nombre: _nombre,
             dni: _dni,
             apellido: _apellido
@@ -23,22 +23,26 @@ function enviarReq(){
             'content-type':'application/json' , 
             'timeout':  3500
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(temp)
     }
  
 
-    fetch('/crearPersonas', opciones )
-        .then( res => {      
-            switch(res.status){
-                case 201: alert("Se agrego a la persona a la base de datos con el id: " + res.body);
-                    break;
-                case 400: alert("Existe algun error con el formato del formulario");
-                    break;
-                case 500: alert("Error inesperado, no se ha podido completar");
-                    break;
-                default: alert("Error");
-            }
+const respuesta = await fetch('/crearPersonas', opciones );
+const data = await respuesta.json();
+      
+    switch(data.status){
 
-        })
+        case 201: 
+            var ID = JSON.parse(data.mensaje);
+            alert(`Se envio a la base de datos correctamente y se asigno el id: ${ID.name}`);
+            break;
+        case 400:
+            alert(`Ocurrio un error con el formato del formulario.\n${data.mensaje}`);
+            break;
+        case 500:
+            alert(`Ocurio un error inesperado. \n ${data.mensaje}`);
+            break;
+    }
+        
 
 }

@@ -30,7 +30,10 @@ app.post('/crearPersonas', async (req, res) =>{
 
     }catch (e){
         res.status(400);
-        res.send(e);
+        res.json({
+            status: 400,
+            mensaje: e.message
+        });
         return;
     }  
 
